@@ -118,7 +118,8 @@ function endGame() {
   clearInterval(gameInterval);
   let removed = [];
   for (let i = 0; i < ROCKS.length; i++) {
-    removed.push(ROCKS[i]);
+    let rock = createRock(i)
+    removed.push(rock);
   }
   window.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!')
